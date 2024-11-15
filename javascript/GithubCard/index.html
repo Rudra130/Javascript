@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img id="img" alt="github" />
+      </div>
+      <div class="details">
+        <h1 id="name"></h1>
+        <h5 id="email">rt1766285@gmail.com</h5>
+        <div class="repo">
+          <p><strong>Repo:</strong> <span id="rep"></span></p>
+          <p><strong>Followers:</strong> <span id="followers"></span></p>
+          <p><strong>Following:</strong> <span id="following"></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const url = "https://api.github.com/users/VedantGuptaX";
+    const hxr = new XMLHttpRequest();
+    hxr.open("GET", url);
+
+    hxr.onreadystatechange = function () {
+      console.log(hxr.readyState);
+      if (hxr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(data);
+        console.log(data.followers);
+        let img = data.avatar_url;
+        let name = data.name;
+        let followers = data.followers;
+        let following = data.following;
+        let repository = data.public_repos;
+        document.getElementById("img").setAttribute("src", img);
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("rep").innerHTML = repository;
+        document.getElementById("followers").innerHTML = followers;
+        document.getElementById("following").innerHTML = following;
+      }
+    };
+
+    hxr.send();
+  </script>
+</html>

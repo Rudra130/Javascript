@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <h1>Theme Changer</h1>
+       <div class="container">
+          <div class="color">
+              <span id = "yellow">yellow</span>
+              <span id = "blue">blue</span>
+              <span id = "orange">orange</span>
+              <span id = "green">green</span>
+          </div>
+       </div
+</body>
+
+<script>
+  
+    function colorChanger(name,id){
+        const div= document.getElementById(id);
+        div.addEventListener('mouseenter',()=>{
+            document.body.style.backgroundColor=name;
+        })
+        div.addEventListener('mouseleave',()=>{
+            document.body.style.backgroundColor="white";
+        })
+    }
+
+    colorChanger("yellow","yellow")
+    colorChanger("blue","blue")
+    colorChanger("orange","orange")
+    colorChanger("green","green")
+    
+</script>
+</html>

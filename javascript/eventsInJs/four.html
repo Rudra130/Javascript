@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event Table</title>
+    
+    <style>
+       
+        .insert {
+            width: 80%;
+            margin: 25px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .insert thead tr {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        
+        .insert th, .insert td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+       
+        .insert tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+       
+        .insert tbody tr:hover {
+            background-color: #e9f5f1;
+        }
+
+        
+        .color {
+            background-color: #009879;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <table class="insert" id="tb">
+        <thead>
+            <tr class="color">
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+
+    <script>
+        const insert = document.getElementById('tb').getElementsByTagName('tbody')[0];
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML += `<tr><td>${e.key==' ' ? "space":e.key}</td><td>${e.keyCode}</td><td>${e.code}</td></tr>`;
+        });
+    </script>
+</body>
+</html>

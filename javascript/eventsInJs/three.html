@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color" , id="box">
+         <h2>Random Color Generator</h2>
+         <h3>How it Works</h3>
+         <ul class="list">
+            <li>
+                click on the button
+            </li>
+            <li>
+               the color will be generated automatically
+            </li>
+            <li>
+                and color will show the screen
+            </li>
+            <li>
+                click on stop to stopm the generation of code
+            </li>
+        </ul>
+        <h3>the generated color is <span id="hex"> </span></h3>
+        <button id="btn">Generate color</button>
+        <button id="stop">stop</button>
+    </div>
+
+    
+</body>
+
+<script>
+    let hex;
+    let intervalId;
+    
+
+    function getRandomHexColor() {
+        return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+    } 
+
+
+    function implement(){
+         hex = getRandomHexColor();
+        document.getElementById('hex').innerHTML=hex;
+        document.getElementById('box').style.backgroundColor=hex;   
+    }
+    function start(){
+        if (intervalId) {
+            clearInterval(intervalId); 
+        }
+      intervalId=  setInterval(implement,1000)
+    }
+   
+    document.getElementById('btn').addEventListener('click',start)
+   
+  
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearInterval(intervalId)
+        intervalId=null
+        
+    })
+   
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchounous</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rudra preet</h1>
+    <button id="btn">Click me</button> 
+    <div class="counter">
+        <p id="count">0</p>
+    </div>
+
+    
+
+
+      
+</body>
+
+<script>
+    function change(){
+        document.querySelector('h1').innerHTML="rptiwarix"
+    }
+    function change1(){
+        document.querySelector('h1').innerHTML="rudra preet"
+    }
+    document.getElementById('btn').addEventListener('click',()=>{
+        let c= document.getElementById('count').innerHTML
+        let ct = parseInt(c)
+        ct++
+        document.getElementById('count').innerHTML=ct;
+        change1()
+    });
+     const changeMe = setTimeout(change,2000)
+    clearTimeout(changeMe)
+</script>
+</html>

@@ -1,0 +1,8 @@
+.insert {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 25px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}

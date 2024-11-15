@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+</head>
+<body style="background-color: #212121; color : #fff">
+    <div class="cl">
+        <h1> Dom learning on chai or code</h1>
+        <p>this is html file</p>
+    <div class="list">Sunday</div>
+    <div class="list">Monday</div>
+    <div class="list">Tuesday</div>
+    <div class="list">Thursday</div>
+</div>
+
+<div class="language">
+    <li>
+        Javascript
+    </li>
+    
+</div>
+
+  
+</body>
+<script>
+
+    const list = document.querySelector('.cl')
+    console.log(list)
+    console.log(list.children)
+
+    for(let  i=0; i<list.children.length ; i++){
+        list.children[i].style.backgroundColor ='blue' 
+    }
+   
+   function f(){
+    const div = document.createElement('div')
+    div.className="main"
+    div.id=Math.round(Math.random()*10+1)
+    div.style.backgroundColor='green'
+
+    div.style.width='100px'
+    div.style.padding='10px'
+    div.style.marginTop='10px'
+    div.style.borderRadius="10px"
+   const c=  document.createTextNode("Click me")
+   div.appendChild(c)
+  return document.body.appendChild(div);
+   }
+
+   for(let i=0; i<5 ;i++){
+    const ele = f()
+    ele.innerText="hello world"
+   }
+
+   function addLanguage(langName){
+
+   const l= document.createElement('li');
+   l.style.backgroundColor='cyan';
+   l.style.width='100px'
+   l.innerHTML= `${langName}`
+   const lt = document.querySelector('.language')
+    lt.appendChild(l);
+    document.body.appendChild(lt);
+    
+   }
+   addLanguage("python")
+   addLanguage("typescript")
+
+
+   function addOptiLanguage(langName){
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+   }
+   addOptiLanguage('golang')
+
+
+   //Edit
+
+   const sl = document.querySelector("li:nth-child(2)")
+   //sl.innerHTML="Mojo"
+   const newli = document.createElement('li')
+   newli.textContent = "Mojo"
+   newli.style.backgroundColor='blue'
+   newli.style.width='100px'
+   sl.replaceWith(newli)
+
+
+   const s = document.querySelector("li:nth-child(1)")
+   //sl.innerHTML="Mojo"
+   const newl = document.createElement('li')
+   newl.textContent = "c++"
+   newl.style.backgroundColor='blue'
+   newl.style.width='100px'
+   s.replaceWith(newl)
+
+
+
+   
+
+
+
+
+
+    
+ 
+
+</script>
+</html>

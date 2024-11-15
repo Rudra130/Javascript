@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="start">Start</button> 
+    <button id="stop">Stop</button>
+    <div class="text" id="txt"></div> 
+
+    <script>
+        document.getElementById('start').addEventListener('click', startGenerating);
+        document.getElementById('stop').addEventListener('click', stopGenerating);
+        let intervalId;
+
+        function st() {
+            const ele = document.createElement('h3');
+            ele.textContent = 'Hello World';
+            document.getElementById('txt').appendChild(ele);
+        }
+        
+        function startGenerating() {
+            if (!intervalId) { 
+                intervalId = setInterval(st, 1000);
+            }
+        }
+
+        function stopGenerating() {
+            clearInterval(intervalId);
+            intervalId = null; 
+        }
+
+        
+    </script>
+</body>
+</html>

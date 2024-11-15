@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="clock">
+       
+        <div class="inner">  
+        <div class="hand second" id="s"></div>
+        <div class="hand hour" id ="h"></div>
+        <div class="hand minute" id="m"></div>
+        <div class="hand center"></div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    function clock(){
+      let date = new Date()
+      let hours = date.getHours()
+      let minutes = date.getMinutes()
+      let seconds = date.getSeconds()
+       
+
+    const secondsDegrees = (seconds / 60) * 360;
+    const minutesDegrees = (minutes / 60) * 360 + (seconds / 60) * 6;
+    const hoursDegrees = (hours / 12) * 360 + (minutes / 60) * 30;
+
+
+    document.getElementById("s").style.transform = `rotate(${secondsDegrees}deg)`;
+    document.getElementById("h").style.transform = `rotate(${hoursDegrees}deg)`;
+    document.getElementById("m").style.transform = `rotate(${minutesDegrees}deg)`;
+
+    }
+
+    setInterval(clock ,1000)
+    clock()
+</script>
+</html>
+    
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Coursel</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="images">
+        <div class="container">
+            <img id="img-1",  alt="tree" >
+        </div>
+        <div class="container" >
+            <img id="img-2", alt="tree">
+        </div>
+        <div class="container" id="3">
+            <img id="img-3", alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-4", alt="tree">
+        </div>
+        <div class="container">
+            <img id="img-5", alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-6" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-7", alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-8", alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-9", alt="tree">
+        </div>
+        <div class="container">
+            <img  id="img-10" alt="tree">
+        </div>
+        <div class="container">
+            <img  id="img-11" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-12" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-13" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-14" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-15" alt="tree">
+        </div>
+        <div class="container" >
+            <img id="img-16" alt="tree">
+        </div>
+    </div>
+
+    
+<div class="slider">
+
+</div>
+    
+</body>
+
+       <script>
+         
+        let images= [
+        {
+            "id":1,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":2,
+            "link":"https://i0.wp.com/picjumbo.com/wp-content/uploads/amazing-stone-path-in-forest-free-image.jpg?w=600&quality=80"
+
+        },
+        {
+            "id":3,
+            "link":"https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-autumn-nature-with-trees-of-yellow-leaves-free-image.jpeg?w=600&quality=80"
+
+        },
+        {
+            "id":4,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":5,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":6,
+             "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+        },
+        {
+            "id":7,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":8,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":9,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":10,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":11,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":12,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+            "id":13,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        },
+        {
+              "id":14,
+              "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+        },
+        {
+              "id":15,
+              "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+        },
+        {
+            "id":16,
+            "link":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+
+        }]
+         
+        function getId(id){
+        document.getElementById(`img-${id}`).setAttribute("src",images[id-1].link)
+        }
+
+        for(let i=1 ; i<=images.length ; i++){
+            getId(i)
+        }
+        
+
+
+       </script>
+</html>

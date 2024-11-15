@@ -1,0 +1,92 @@
+.container{
+    width :500px;
+    height :500px;
+    background-color: aqua;
+    margin-left: 30%;
+    border-radius: 10%;
+    display: flex;
+    position: relative;
+}
+.color{
+    position: absolute;
+    background-color: #3e4444;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    border-radius: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    
+}
+#yellow{
+    width:20%;
+    height:20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background-color 0.3s ease;
+    
+}
+h1{
+    margin-top: 10%;
+    margin-left: 40%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#yellow:hover {
+    background-color: yellow;
+}
+#blue:hover {
+    background-color: blue;
+}
+#orange:hover {
+    background-color: orange;
+}
+#green:hover {
+    background-color: green;
+}
+
+
+body {
+    transition: background-color 0.3s ease;
+}
+body {
+    transition: background-color 0.3s ease;
+}
+body {
+    transition: background-color 0.3s ease;
+}
+body {
+    transition: background-color 0.3s ease;
+}
+
+#blue{
+    width:20%;
+    height:20%;
+   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
+#orange{
+    width:20%;
+    height:20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    transition: background-color 0.3s ease;
+}
+#green{
+    width:20%;
+    height:20%;
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
