@@ -7,7 +7,7 @@ function App() {
 //let counter=15
 
 const addValue = ()=>{
-  if(counter>20){
+  if(counter>19){
     setState(0)
     alert("Counter is already at max")
   }else{
