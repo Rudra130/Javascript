@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Card} from "./GithubCard/Card.jsx"
 
 
 
@@ -28,6 +29,7 @@ const removeValue =() =>{
     <button onClick={addValue}>Add Value {counter}</button>
     <br/>
      <button onClick={removeValue}>Remove Value {counter}</button>
+     <Card userId="Rudra130" />
     </>
   )
 
