@@ -9,9 +9,9 @@ export const Card = ({userId='Rudra130'}) => {
   const [userData, setUserData] = useState({
     avatar_url: '',
     name: '',
-    public_repos: 0, 
-    followers: 0,
-    following: 0,
+    public_repos: 1, 
+    followers: 1,
+    following: 1,
   });
 
   
