@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
  
 import { useState } from 'react'
 import Button from './Component/Button'
+import Quote from './Quote/Quote'
 function App() {
   const [color,setColor] = useState("olive")
 
   return (
 
     <>
-      <div className='w-full h-screen duration-200'
+      {/* <div className='w-full h-screen duration-200'
         style={{backgroundColor:color}}> 
           
       <div className='fixed flex flex-wrap
@@ -29,7 +31,9 @@ function App() {
         
         </div>
       </div>
-      </div>
+      </div> */}
+
+      <Quote/>
     
       </>
     
