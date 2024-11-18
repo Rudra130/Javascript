@@ -11,6 +11,7 @@ const Quote = () => {
   const [author,setAuthor ]=useState('')
   const [date,setDate] =useState('')
   let [count ,setCount]=useState(0)
+  let [mod,setModDate] =useState('')
     
     const q = async () =>{
     try{
@@ -19,7 +20,7 @@ const Quote = () => {
       setQuote(data.content)
       setAuthor(data.author)
       setDate(data.dateAdded)
-     
+      setModDate(data.dateModified)
       setCount(count+1)
       console.log(data)
     }catch(error){
@@ -39,8 +40,9 @@ const Quote = () => {
   <h1 className="text-3xl font-bold mb-4">Random Quotes App</h1>
   <p className="italic text-2xl mb-2">{quote}</p>
   <p className="mb-4">- {author}</p>
-  <p className='italic mb-5'>{date}</p>
-  <p>{count}</p>
+  <p className='italic mb-5'>Added Date :{date}</p>
+  <p className='italic mb-6'> Count:{count}</p>
+  <p className='italic mb-6'> Modified Date :{mod}</p>
 
   <button 
     onClick={q} 
